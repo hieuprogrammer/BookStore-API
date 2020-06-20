@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mqgUoPYtk3SKWfOdGgc3j2/Jc78irn61bgFy+rcFtCuo0HE+NVyF1zmZmtQEpjr1q97xaWM8k1TxQWgWzAOMAw==",
+  "dgSpecHash": "zupbdGUc5mLtZ/db+pFlGFIsM/H5KIKZBgyK0rnCVb32qlol3kL+OhTfYb1JnUh2juGcGTV3piVI21WuxWpkLA==",
   "success": true,
   "projectFilePath": "D:\\Hieu\\Computer_Programming\\Computer_Programs\\C#\\C# Courses\\Udemy\\End to End ASP.NET Core 3.1 API and Blazor Development\\BookStore-API\\BookStore-API\\BookStore-API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Hieu\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\Hieu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Hieu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.5\\microsoft.aspnetcore.cryptography.internal.3.1.5.nupkg.sha512",
     "C:\\Users\\Hieu\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.5\\microsoft.aspnetcore.cryptography.keyderivation.3.1.5.nupkg.sha512",
     "C:\\Users\\Hieu\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\3.1.5\\microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.5.nupkg.sha512",
