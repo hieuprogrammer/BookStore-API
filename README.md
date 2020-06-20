@@ -1,2 +1,2 @@
 # BookStore-API
-BookStoreAPI using .NET Core
+Book Store API using .NET Core
