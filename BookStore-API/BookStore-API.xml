@@ -4,6 +4,12 @@
         <name>BookStore-API</name>
     </assembly>
     <members>
+        <member name="M:BookStore_API.Controllers.AuthorsController.GetAuthors">
+            <summary>
+            HTTP 1.1 GET response to retrieve all Authors
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:BookStore_API.Controllers.HomeController">
             <summary>
             
