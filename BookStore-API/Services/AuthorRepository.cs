@@ -41,6 +41,11 @@ namespace BookStore_API.Services
             return author;
         }
 
+        public async Task<bool> isExists(int id)
+        {
+            return await _db.Authors.AnyAsync(author => author.Id == id);
+        }
+
         public async Task<bool> Save()
         {
             var changes = await _db.SaveChangesAsync();
