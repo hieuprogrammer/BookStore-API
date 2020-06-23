@@ -12,9 +12,13 @@ using NLog;
 
 namespace BookStore_API.Controllers
 {
+    /// <summary>
+    /// AuthorsController interact with Authors table in MS SQL Server database.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public class AuthorsController : ControllerBase
@@ -107,7 +111,7 @@ namespace BookStore_API.Controllers
                 }
                 if (!ModelState.IsValid) 
                 {
-                    _logger.LogWarn($"End user sent an empty HTTP 1.1 POST request to create a new Author with invalid Author data!");
+                    _logger.LogWarn($"End user sent an HTTP 1.1 POST request to create a new Author with invalid Author data!");
                     return BadRequest(ModelState);
                 }
                 var newAuthor = _mapper.Map<Author>(authorCreateDTO);
@@ -139,9 +143,10 @@ namespace BookStore_API.Controllers
         {
             try
             {
-                _logger.LogInfo($"End user attempted to update existing Author with ID number: {id}.");
+                _logger.LogInfo($"End user attempted to update an existing Author with ID number: {id}.");
                 if (id < 1 || authorUpdateDTO == null || id != authorUpdateDTO.Id) 
                 {
+                    _logger.LogWarn($"End user sent an HTTP 1.1 POST request to create a new Author with invalid Author data!");
                     return BadRequest();
                 }
                 if (!ModelState.IsValid) 
@@ -154,6 +159,7 @@ namespace BookStore_API.Controllers
                 {
                     return InternalError($"Failed updating Author!");
                 }
+                _logger.LogWarn($"Successfully updated Author with ID number {id}!");
                 return NoContent();
             }
             catch (Exception exception)
@@ -170,6 +176,7 @@ namespace BookStore_API.Controllers
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(int id)
         {
