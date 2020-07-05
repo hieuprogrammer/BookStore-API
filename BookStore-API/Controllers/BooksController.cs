@@ -226,7 +226,7 @@ namespace BookStore_API.Controllers
         private ObjectResult InternalError(string message)
         {
             _logger.LogError(message);
-            return StatusCode(500, "Internal Server Error.Contact Hieu for further support by email: hieucoder@outlook.com");
+            return StatusCode(500, "Internal Server Error. Contact Hieu for support by email: hieucoder@outlook.com.");
         }
     }
 }
